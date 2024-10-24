@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btnDial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gọi điện thoại"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnViewContacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xem danh bạ"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnSendSMS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gửi SMS"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnViewImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xem ảnh"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnPlayMusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nghe nhạc"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnOpenMaps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tìm đường trên Google Maps"/>
+
+</LinearLayout>
