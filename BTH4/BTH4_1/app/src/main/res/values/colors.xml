@@ -1,0 +1,5 @@
+<resources>
+    <color name="purple_500">#6200EE</color> <!-- Màu tím cho colorPrimary -->
+    <color name="purple_700">#3700B3</color> <!-- Màu tím đậm hơn cho colorPrimaryDark -->
+    <color name="teal_200">#03DAC5</color> <!-- Màu teal cho colorAccent -->
+</resources>

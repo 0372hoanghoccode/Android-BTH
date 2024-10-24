@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/sm_file"
+        android:title="File">
+        <menu>
+            <item
+                android:id="@+id/sm_new"
+                android:title="new" />
+            <item
+                android:id="@+id/sm_save"
+                android:title="save" />
+            <item
+                android:id="@+id/sm_load"
+                android:title="load" />
+            <item
+                android:id="@+id/sm_exit"
+                android:title="exit" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/sm_edit"
+        android:title="edit" />
+    <item
+        android:id="@+id/sm_view"
+        android:title="view" />
+    <item
+        android:id="@+id/sm_tool"
+        android:title="tool" />
+</menu>
