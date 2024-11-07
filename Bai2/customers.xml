@@ -1,0 +1,128 @@
+<customers>
+    <customer>
+        <name>Nguyen Van A</name>
+        <points>100</points>
+        <phone>0123456789</phone>
+        <createdDate>2023-01-01</createdDate>
+    </customer>
+    <customer>
+        <name>Tran Thi B</name>
+        <points>200</points>
+        <phone>0987654321</phone>
+        <createdDate>2023-02-15</createdDate>
+    </customer>
+    <customer>
+        <name>Le Van C</name>
+        <points>150</points>
+        <phone>0912345678</phone>
+        <createdDate>2023-03-10</createdDate>
+    </customer>
+    <customer>
+        <name>Phan Thi D</name>
+        <points>250</points>
+        <phone>0934567890</phone>
+        <createdDate>2023-04-05</createdDate>
+    </customer>
+    <customer>
+        <name>Vu Van E</name>
+        <points>300</points>
+        <phone>0901234567</phone>
+        <createdDate>2023-05-20</createdDate>
+    </customer>
+    <customer>
+        <name>Nguyen Thi F</name>
+        <points>120</points>
+        <phone>0945678901</phone>
+        <createdDate>2023-06-15</createdDate>
+    </customer>
+    <customer>
+        <name>Hoang Van G</name>
+        <points>180</points>
+        <phone>0987654322</phone>
+        <createdDate>2023-07-01</createdDate>
+    </customer>
+    <customer>
+        <name>Tran Van H</name>
+        <points>220</points>
+        <phone>0923456789</phone>
+        <createdDate>2023-07-25</createdDate>
+    </customer>
+    <customer>
+        <name>Nguyen Van I</name>
+        <points>90</points>
+        <phone>0919876543</phone>
+        <createdDate>2023-08-10</createdDate>
+    </customer>
+    <customer>
+        <name>Phan Thi J</name>
+        <points>170</points>
+        <phone>0954321789</phone>
+        <createdDate>2023-09-05</createdDate>
+    </customer>
+    <customer>
+        <name>Le Thi K</name>
+        <points>80</points>
+        <phone>0965432178</phone>
+        <createdDate>2023-09-25</createdDate>
+    </customer>
+    <customer>
+        <name>Vu Van L</name>
+        <points>210</points>
+        <phone>0976543210</phone>
+        <createdDate>2023-10-10</createdDate>
+    </customer>
+    <customer>
+        <name>Nguyen Thi M</name>
+        <points>130</points>
+        <phone>0981234567</phone>
+        <createdDate>2023-10-15</createdDate>
+    </customer>
+    <customer>
+        <name>Hoang Van N</name>
+        <points>140</points>
+        <phone>0909876543</phone>
+        <createdDate>2023-10-20</createdDate>
+    </customer>
+    <customer>
+        <name>Tran Van O</name>
+        <points>160</points>
+        <phone>0921987654</phone>
+        <createdDate>2023-10-22</createdDate>
+    </customer>
+    <customer>
+        <name>Nguyen Van P</name>
+        <points>210</points>
+        <phone>0911234567</phone>
+        <createdDate>2023-10-23</createdDate>
+    </customer>
+    <customer>
+        <name>Le Thi Q</name>
+        <points>190</points>
+        <phone>0931234567</phone>
+        <createdDate>2023-10-23</createdDate>
+    </customer>
+    <customer>
+        <name>Phan Van R</name>
+        <points>75</points>
+        <phone>0943216789</phone>
+        <createdDate>2023-10-23</createdDate>
+    </customer>
+    <customer>
+        <name>Vu Van S</name>
+        <points>230</points>
+        <phone>0976543298</phone>
+        <createdDate>2023-10-23</createdDate>
+    </customer>
+    <customer>
+        <name>Nguyen Thi T</name>
+        <points>140</points>
+        <phone>0956789123</phone>
+        <createdDate>2023-10-23</createdDate>
+    </customer>
+    <customer>
+        <name>Hoang Van U</name>
+        <points>125</points>
+        <phone>0967891234</phone>
+        <createdDate>2023-10-23</createdDate>
+    </customer>
+</customers>

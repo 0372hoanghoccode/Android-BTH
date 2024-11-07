@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/btnChangeAccount"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Đổi mật khẩu" />
+
+        <Button
+            android:id="@+id/btnCustomerList"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Danh sách khách hàng" />
+
+        <Button
+            android:id="@+id/btnAddPoints"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Nhập điểm" />
+
+        <Button
+            android:id="@+id/btnUsePoints"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Sử dụng điểm" />
+
+        <Button
+            android:id="@+id/btnExport"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Xuất dữ liệu" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
