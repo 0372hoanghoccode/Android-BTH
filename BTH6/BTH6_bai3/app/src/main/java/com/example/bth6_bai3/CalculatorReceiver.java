@@ -9,17 +9,15 @@ public class CalculatorReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        // Check the action
-        if (MainActivity.Key.ACTION_PLUS_NUMBER.equals(intent.getAction())) {
-            // Get the numbers from the Intent
-            int a = intent.getIntExtra(MainActivity.Key.NUMBER_A, 0);
-            int b = intent.getIntExtra(MainActivity.Key.NUMBER_B, 0);
-
-            // Calculate the sum
-            int result = a + b;
-
-            // Display the result in a Toast
-            Toast.makeText(context, "Result: " + result, Toast.LENGTH_SHORT).show();
+        switch (intent.getAction()) {
+            case MainActivity.Key.ACTION_PLUS_NUMBER:
+                int a = intent.getIntExtra(MainActivity.Key.NUMBER_A, 0);
+                int b = intent.getIntExtra(MainActivity.Key.NUMBER_B, 0);
+                Toast.makeText(context, "Result: " + (a + b), Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                break;
         }
     }
 }
+

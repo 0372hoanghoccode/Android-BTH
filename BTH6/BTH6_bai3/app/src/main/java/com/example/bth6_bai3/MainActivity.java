@@ -1,77 +1,71 @@
 package com.example.bth6_bai3;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText editTextA, editTextB;
-    private Button buttonPlus, buttonEquals, buttonClear;
+    public static class Key {
+        public static final String ACTION_PLUS_NUMBER = "com.example.broadcastcalculator.PLUS_NUMBER";
+        public static final String NUMBER_A = "number_a";
+        public static final String NUMBER_B = "number_b";
+    }
 
+    private EditText editText1, editText2;
+    private Button btn;
+    private CalculatorReceiver receiver;
+
+    @SuppressLint("UnspecifiedRegisterReceiverFlag")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editTextA = findViewById(R.id.editTextA);
-        editTextB = findViewById(R.id.editTextB);
-        buttonPlus = findViewById(R.id.buttonPlus);
-        buttonEquals = findViewById(R.id.buttonEquals);
-        buttonClear = findViewById(R.id.buttonClear);
+        // Ánh xạ các thành phần giao diện
+        editText1 = findViewById(R.id.editText1);
+        editText2 = findViewById(R.id.editText2);
+        btn = findViewById(R.id.btn);
 
-        // Implement button functionality
-        buttonPlus.setOnClickListener(v -> performAddition());
-        buttonEquals.setOnClickListener(v -> showResult());
-        buttonClear.setOnClickListener(v -> clearInputs());
+        // Thiết lập hành động khi nhấn nút
+        btn.setOnClickListener(this::onClick);
 
-        // Number and operator buttons
-        setButtonListeners();
+        // Đăng ký BroadcastReceiver
+        receiver = new CalculatorReceiver();
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(Key.ACTION_PLUS_NUMBER);
+        registerReceiver(receiver, filter);
     }
 
-    private void performAddition() {
-        int numberA = Integer.parseInt(editTextA.getText().toString());
-        int numberB = Integer.parseInt(editTextB.getText().toString());
+    public void onClick(View v) {
+        try {
+            // Lấy giá trị từ các ô nhập liệu
+            int a = Integer.parseInt(editText1.getText().toString());
+            int b = Integer.parseInt(editText2.getText().toString());
 
-        Intent intent = new Intent(MainActivity.Key.ACTION_PLUS_NUMBER);
-        intent.putExtra(MainActivity.Key.NUMBER_A, numberA);
-        intent.putExtra(MainActivity.Key.NUMBER_B, numberB);
+            // Gửi Intent với dữ liệu
+            Intent intent = new Intent(Key.ACTION_PLUS_NUMBER);
+            intent.putExtra(Key.NUMBER_A, a);
+            intent.putExtra(Key.NUMBER_B, b);
+            sendBroadcast(intent);
 
-        sendBroadcast(intent);
-    }
-
-    private void showResult() {
-        // Logic to calculate and display result can go here
-    }
-
-    private void clearInputs() {
-        editTextA.setText("");
-        editTextB.setText("");
-    }
-
-    private void setButtonListeners() {
-        // Define onClick listeners for each button to handle numeric inputs
-        // Example:
-        findViewById(R.id.button0).setOnClickListener(v -> appendToCurrentInput("0"));
-        findViewById(R.id.button1).setOnClickListener(v -> appendToCurrentInput("1"));
-        findViewById(R.id.button2).setOnClickListener(v -> appendToCurrentInput("2"));
-        // Repeat for other number buttons...
-    }
-
-    private void appendToCurrentInput(String text) {
-        if (editTextA.isFocused()) {
-            editTextA.append(text);
-        } else if (editTextB.isFocused()) {
-            editTextB.append(text);
+        } catch (NumberFormatException e) {
+            // Xử lý khi nhập liệu không hợp lệ
+            Toast.makeText(this, "Vui lòng nhập số hợp lệ!", Toast.LENGTH_SHORT).show();
         }
     }
 
-    public static class Key {
-        public static final String ACTION_PLUS_NUMBER = "com.example.bth6_bai3.ACTION_PLUS_NUMBER";
-        public static final String NUMBER_A = "com.example.bth6_bai3.NUMBER_A";
-        public static final String NUMBER_B = "com.example.bth6_bai3.NUMBER_B";
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // Hủy đăng ký BroadcastReceiver khi không cần thiết
+        unregisterReceiver(receiver);
     }
 }

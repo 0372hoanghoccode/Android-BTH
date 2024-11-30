@@ -25,7 +25,12 @@
         <!-- Register CalculatorReceiver to listen for broadcasts -->
         <receiver
             android:name=".CalculatorReceiver"
-            android:exported="false" /> <!-- Set to 'false' to restrict broadcasts to this app -->
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.example.ACTION_PLUS_NUMBER" />
+            </intent-filter>
+        </receiver>
+
 
     </application>
 
